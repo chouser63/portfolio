@@ -13,22 +13,23 @@ export function Navbar() {
         >
           Home
         </Link>
+
         <Link
-          href="/about"
+          href="/experience"
           className={cn("text-sm font-medium text-muted-foreground hover:text-foreground transition-colors")}
         >
-          About
+          Experience
         </Link>
+
         <Link
-          href="/contact"
+          href="/shower-thoughts"
           className={cn("text-sm font-medium text-muted-foreground hover:text-foreground transition-colors")}
         >
-          Contact
+          Shower Thoughts
         </Link>
         
         <Link
-          href="/resume.pdf"
-          download
+          href="/resume"
           className={cn("text-sm font-medium text-muted-foreground hover:text-foreground transition-colors")}
         >
           Resume
