@@ -7,11 +7,11 @@ export function Navbar() {
   return (
     <nav className="flex items-center justify-between px-6 py-3 border-b bg-background">
       <Link
-          href="/"
-          className={cn("text-lg font-semibold")}
-        >
-          Chase Houser
-        </Link>
+        href="/"
+        className={cn("text-lg font-semibold")}
+      >
+        Chase Houser
+      </Link>
 
       <div className="flex items-center hidden sm:block space-x-6">
 
