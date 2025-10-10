@@ -1,9 +1,14 @@
+import { Github } from "lucide-react";
 import { Slideshow } from "./slideshow";
 
 type GalleryItem = {
-  title: string;
+  title: {
+    text: string;
+    link?: string;
+    github?: string;
+  } | string;
   description: string;
-  image_urls: string[];
+  image_urls?: string[];
 };
 
 type Gallery = {
@@ -25,25 +30,51 @@ function StaggeredGallery({ gallery }: { gallery: Gallery }) {
           const isEven = index % 2 === 0;
           return (
             <li key={`row-${index}`}>
-              <div className="flex flex-col items-center justify-center md:gap-8 md:px-8 lg:flex-row">
+              <div className={`flex flex-col ${galleryItem.image_urls ? 'items-center justify-center' : 'items-start justify-start'} md:gap-8 md:px-8 lg:flex-row`}>
                 <div
-                  className={`order-1 ${isEven ? "lg:order-1" : "lg:order-2"} mb-4 space-y-2 text-left lg:mb-0 lg:w-1/2`}
+                  className={`order-1 ${isEven ? "lg:order-1" : "lg:order-2"} mb-4 space-y-2 text-left lg:mb-0 ${galleryItem.image_urls ? 'lg:w-1/2' : 'lg:w-full'}`}
                 >
                   <h1 className="text-2xl font-bold sm:text-3xl">
-                    {galleryItem.title || "Title"}
+                    <div className="flex flex-row items-center justify-start">
+                      {typeof galleryItem.title === 'string' ? (
+                        galleryItem.title
+                      ) : (
+                        galleryItem.title.link ? (
+                          <a href={galleryItem.title.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline decoration-blue-400 underline-offset-4 hover:text-blue-800 hover:decoration-blue-800 transition-colors">
+                            {galleryItem.title.text}
+                          </a>
+                        ) : galleryItem.title.text
+                      )}
+
+                      {typeof galleryItem.title !== 'string' && galleryItem.title.github && (
+                        <a href={galleryItem.title.github} target="_blank" rel="noopener noreferrer">
+                          <Github className="ml-6 inline h-12 w-12 hover:text-gray-600 dark:hover:text-gray-300 transition-colors" />
+                        </a>
+                      )}
+
+
+                    </div>
                   </h1>
                   <p className="text-xl leading-relaxed text-slate-700 sm:text-2xl dark:text-white">
                     {galleryItem.description}
                   </p>
                 </div>
 
-                <div
-                  className={`order-2 ${isEven ? "lg:order-2" : "lg:order-1"} lg:w-1/2`}
-                >
-                  <div className="mx-auto aspect-square w-full max-w-[500px]">
-                    <Slideshow images={galleryItem.image_urls || []} />
+
+                {galleryItem.image_urls ? (
+                  <div
+                    className={`w-full order-2 ${isEven ? "lg:order-2" : "lg:order-1"} lg:w-1/2`}
+                  >
+                    <div className="mx-auto w-full aspect-square md:max-w-[85%] lg:max-w-[500px]">
+                      <Slideshow images={galleryItem.image_urls || []} />
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <></>
+                )}
+
+
+
               </div>
             </li>
           );
