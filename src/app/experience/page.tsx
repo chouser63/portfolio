@@ -3,12 +3,12 @@ import { StaggeredGallery } from "@/components/ui/staggered-gallery";
 export default function Experience() {
 
     const galleryData = {
-        title: "Project Showcase",
+        title: "Projects & Experience",
         items: [
             {
-                title: "Level 1 — Neural Pathways",
+                title: "Odyssey — Full-Stack Development, Khoury College",
                 description:
-                    "A visualization of how machine learning models interpret and connect data points. This level introduces the core AI concepts behind my research project, blending interactivity and data visualization.",
+                    "Contributed to Odyssey, a learning platform for asynchronous skill-building courses. Developed and launched 12 major features including note-taking, text highlighting, due dates, dark mode, and a personalized activity feed. Built a responsive UI with Next.js 15 and Tailwind CSS, maintained a cohesive design system, and implemented CI/CD pipelines on AWS using ECS Fargate, RDS, and S3. Refactored storage modules to optimize API performance and achieved 95% test coverage through over 200 Jest unit tests.",
                 image_urls: [
                     "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
                     "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
@@ -16,19 +16,9 @@ export default function Experience() {
                 ],
             },
             {
-                title: "Level 2 — Code Architecture",
+                title: "Home Automation & Embedded Systems, Complete Home Technology",
                 description:
-                    "An interactive diagram of the system architecture for my full-stack web application project, highlighting API routes, data flows, and deployment pipelines.",
-                image_urls: [
-                    "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
-                    "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
-                ],
-            },
-            {
-                title: "Level 3 — Design Systems",
-                description:
-                    "A collection of modular UI components designed with Tailwind and ShadCN, showcasing the visual identity and accessibility-first approach of my portfolio.",
+                    "Installed and programmed premium home automation systems using Crestron and RTI processors, integrating network, audio/visual, and security technologies for residential clients. Managed complex $30k–$50k system setups and provided technical support and maintenance to multiple clients weekly.",
                 image_urls: [
                     "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
                     "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
@@ -36,17 +26,26 @@ export default function Experience() {
                 ],
             },
             {
-                title: "Level 4 — Motion & Interaction",
+                title: "Local League Legends, Northeastern University",
                 description:
-                    "This level highlights my experience with front-end animations and transitions using Framer Motion, improving user engagement and perceived performance.",
+                    "Collaborated with a four-person team to build a sports league management application in a containerized environment. Designed and implemented a Flask REST API with 59 routes supporting CRUD operations on a MySQL database, integrated with an Appsmith front-end, and established role-based access control with four permission tiers.",
                 image_urls: [
                     "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
                     "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
                     "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
                 ],
             },
+            {
+                title: "Database Teaching Assistant, Northeastern University",
+                description:
+                    "Served as a Teaching Assistant for Introduction to Databases at Northeastern University. Conducted weekly office hours to support students, clarified relational model concepts, and graded over 120 submissions per assignment. Focused on improving student understanding of SQL, schema design, and query optimization.",
+                image_urls: [
+                    "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=80",
+                ],
+            },
         ],
     };
+
 
     return (
         <div className="w-full h-full flex flex-col items-center justify-center pt-6">

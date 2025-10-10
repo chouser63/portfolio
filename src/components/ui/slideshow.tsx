@@ -25,7 +25,7 @@ function Slideshow({ images }: { images: string[] }) {
         {images.map((image, index) => {
           if (images.length === 0) {
             return (
-              <div className="flex h-full w-full items-center justify-center border border-slate-200 bg-slate-50">
+              <div key={`${index}`} className="flex h-full w-full items-center justify-center border border-slate-200 bg-slate-50">
                 <p className="text-slate-500">No images available</p>
               </div>
             );
