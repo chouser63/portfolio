@@ -15,6 +15,7 @@ export default function Experience() {
                     "Contributed to Odyssey, a learning platform for asynchronous skill-building courses. Developed and launched 12+ major features including note-taking, text highlighting, due dates, dark mode, and a personalized activity feed. Built a responsive UI with Next.js and Tailwind, and architected dev and prod deployments on AWS using ECS Fargate, RDS, S3, etc. Fun fact! I designed the features page of Odyssey as a reusable component which is what makes up this page!",
                 image_urls: [
                     "/images/odyssey-explore.png",
+                    "/images/odyssey-architecture.png",
                     "/images/odyssey-feed.png",
                     "/images/odyssey-group.png",
                     "/images/odyssey-note.png",
