@@ -10,7 +10,7 @@ export function ProgressClicker() {
   return (
     <div className="flex flex-row items-center justify-center w-full space-x-4">
         <Button onClick={() => setPercent((prev) => prev >= 100 ? 0 : prev + 0.5)}></Button>
-        <Progress value={percent} className="h-4 w-100 rounded-full" />
+        <Progress value={percent} className="h-4 w-full rounded-full" />
     </div>
 
   );

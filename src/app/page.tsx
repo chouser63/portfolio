@@ -9,7 +9,9 @@ export default function Home() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center pt-6 space-y-6">
 
-      <ProgressClicker/>
+      <div className="w-1/2">
+        <ProgressClicker/>
+      </div>
         
     </div>
   );
