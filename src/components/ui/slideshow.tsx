@@ -11,7 +11,8 @@ function Slideshow({ images }: { images: string[] }) {
 
   return (
     <div
-      className={`relative mx-auto flex h-full w-full scale-100 justify-between overflow-hidden border border-slate-200 bg-slate-50 text-center shadow-[0px_0px_8px_rgb(29,58,138)] dark:shadow-[0px_0px_12px_rgb(0,255,255)]`}
+      className={`relative mx-auto flex h-full w-full scale-100 justify-between overflow-hidden border border-slate-200 bg-slate-50 text-center shadow-[0px_4px_10px_rgba(0,0,0,0.3)]
+`}
     >
       <button
         onClick={() => setSlideshowPosition((prev) => prev - 1)}
