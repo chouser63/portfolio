@@ -6,16 +6,11 @@ import { Button } from "./ui/button";
 
 export function ProgressClicker() {
   const [percent, setPercent] = useState(0);
-  const [isSaveClicked, setIsSaveClicked] = useState(false);
 
   const handleClick = () => {
     const newPercent = percent + 0.5;
     if (newPercent >= 100) {
       setPercent(0);
-      setIsSaveClicked(true);
-      setTimeout(() => {
-        setIsSaveClicked(false);
-      }, 1000);
     } else {
       setPercent(newPercent);
     }
