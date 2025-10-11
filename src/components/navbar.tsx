@@ -3,6 +3,15 @@ import { cn } from "@/lib/utils"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Menu } from "lucide-react"
 
+/*
+<Link
+                href="/shower-thoughts"
+                className="w-full px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground cursor-pointer"
+              >
+                Shower Thoughts
+              </Link>
+*/
+
 export function Navbar() {
   return (
     <nav className="flex items-center justify-between px-6 py-3 border-b bg-background">
@@ -20,13 +29,6 @@ export function Navbar() {
           className={cn("text-sm font-medium text-muted-foreground hover:text-foreground transition-colors")}
         >
           Experience
-        </Link>
-
-        <Link
-          href="/shower-thoughts"
-          className={cn("text-sm font-medium text-muted-foreground hover:text-foreground transition-colors")}
-        >
-          Shower Thoughts
         </Link>
 
         <Link
@@ -51,14 +53,6 @@ export function Navbar() {
                 className="w-full px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground cursor-pointer"
               >
                 Experience
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem asChild>
-              <Link
-                href="/shower-thoughts"
-                className="w-full px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground cursor-pointer"
-              >
-                Shower Thoughts
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
