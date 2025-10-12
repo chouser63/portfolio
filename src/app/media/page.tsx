@@ -9,7 +9,7 @@ export default function Media() {
     { src: "/images/gallery3.JPG", description: "Taken in Badlands National Park on a road trip my brother and I took from Illinois to Seattle." },
     { src: "/images/gallery4.JPG", description: "My brother Cole standing at the edge of a cliff in Badlands." },
     { src: "/images/gallery5.JPG", description: "Cannon Mountain, Franciona, NH" },
-    { src: "/images/gallery6.JPG", description: "Us in another life?" },
+    { src: "/images/gallery6.JPG", description: "Us?" },
     { src: "/images/gallery7.JPG", description: "Mission Hill, Boston" },
     { src: "/images/gallery8.JPG", description: "Mission Hill, Boston" },
     { src: "/images/gallery9.JPG", description: "Mission Hill, Boston + Blue the dog" },
