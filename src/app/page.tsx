@@ -15,8 +15,8 @@ export default function Home() {
       </div>
       <div className="w-3/4 sm:w-1/2 space-y-6 text-xl text-slate-700 dark:text-white">
         <div className="flex flex-row space-x-6">
-          <SocialIcon url="https://www.github.com/chouser63" target="_blank" rel="noopener noreferrer"/>
-          <SocialIcon url="https://www.linkedin.com/in/chase-houser/" target="_blank" rel="noopener noreferrer"/>
+          <SocialIcon url="https://www.github.com/chouser63" target="_blank" rel="noopener noreferrer" className="hover:scale-105"/>
+          <SocialIcon url="https://www.linkedin.com/in/chase-houser/" target="_blank" rel="noopener noreferrer" className="hover:scale-105"/>
         </div>
         <p>
           I&apos;m a third-year Computer Science and Business Administration student at Northeastern University with a deep passion for learning new things and a belief in having a wide breadth of experiences.
