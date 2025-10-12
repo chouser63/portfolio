@@ -49,7 +49,7 @@ export default function Experience() {
 
     return (
         <div className="w-full h-full flex flex-col items-center justify-center pt-6">
-            <StaggeredGallery gallery={galleryData} />;
+            <StaggeredGallery gallery={galleryData} />
         </div>
     )
 }
