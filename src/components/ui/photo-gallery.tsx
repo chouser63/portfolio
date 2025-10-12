@@ -62,12 +62,12 @@ export default function PhotoGallery({ photos }: { photos: Photo[] }) {
                     className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800/50"
                     onClick={handleCloseEnlarged}
                 >
-                    <img
-                        src={enlargedImage?.src}
-                        alt={enlargedImage?.alt}
-                        className="max-w-[90%] max-h-[90vh] object-contain"
-                        onClick={(e) => e.stopPropagation()}
-                    />
+                        <img
+                            src={enlargedImage?.src}
+                            alt={enlargedImage?.alt}
+                            className="max-w-[90%] max-h-[90vh] object-contain"
+                            onClick={(e) => e.stopPropagation()}
+                        />
                 </div>
             )}
         </div>

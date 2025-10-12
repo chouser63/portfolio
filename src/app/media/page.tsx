@@ -16,9 +16,7 @@ export default function Media() {
     { src: "/images/gallery10.JPG", description: "Cannon Mountain, Franciona, NH" }
 ];
 
-
-
-
+    photos.sort(() => Math.random() - 0.5);
 
     return (
         <div>
