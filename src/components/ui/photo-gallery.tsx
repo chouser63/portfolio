@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react";
+import { Skeleton } from "./skeleton";
 
 export type Photo = {
     src: string;
@@ -15,6 +16,14 @@ interface EnlargedImage {
 export default function PhotoGallery({ photos }: { photos: Photo[] }) {
 
     const [enlargedImage, setEnlargedImage] = useState<EnlargedImage | null>(null);
+    const [loadedImages, setLoadedImages] = useState<{ [key: string]: boolean }>({});
+
+    const handleImageLoad = (src: string) => {
+        setLoadedImages(prev => ({
+            ...prev,
+            [src]: true
+        }));
+    };
 
     const handleImageClick = (e: React.MouseEvent) => {
         const target = e.target as HTMLElement;
@@ -34,19 +43,22 @@ export default function PhotoGallery({ photos }: { photos: Photo[] }) {
     };
 
 
-
     return (
         <div className="w-full h-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
                 {photos.map((photo, index) => (
                     <div key={index} className="w-full h-64 overflow-hidden rounded-lg relative group">
+                        {!loadedImages[photo.src] && (
+                            <Skeleton className="absolute inset-0 z-10" />
+                        )}
                         <img
                             src={photo.src}
                             alt={`Photo ${index + 1}`}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ${!loadedImages[photo.src] ? 'opacity-0' : 'opacity-100'}`}
                             onClick={handleImageClick}
+                            onLoad={() => handleImageLoad(photo.src)}
                         />
-                        {photo.description && (
+                        {photo.description && loadedImages[photo.src] && (
                             <div className="absolute bottom-0 bg-slate-950 text-white w-full opacity-0 group-hover:opacity-50 transition-opacity duration-300 p-1 pl-2"
                                 key={`description-${index}`}>
                                 {photo.description}
