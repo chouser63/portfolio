@@ -51,5 +51,5 @@ export default function Experience() {
         <div className="w-full h-full flex flex-col items-center justify-center pt-6">
             <StaggeredGallery gallery={galleryData} />;
         </div>
-    );
+    )
 }
