@@ -3,14 +3,6 @@ import { cn } from "@/lib/utils"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Menu } from "lucide-react"
 
-/*
-<Link
-                href="/shower-thoughts"
-                className="w-full px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground cursor-pointer"
-              >
-                Shower Thoughts
-              </Link>
-*/
 
 export function Navbar() {
   return (
@@ -37,6 +29,12 @@ export function Navbar() {
         >
           Resume
         </Link>
+        <Link
+          href="/media"
+          className={cn("text-sm font-medium text-muted-foreground hover:text-foreground transition-colors")}
+        >
+          Media
+        </Link>
       </div>
 
       <div className="sm:hidden flex items-center">
@@ -61,6 +59,14 @@ export function Navbar() {
                 className="w-full px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground cursor-pointer"
               >
                 Resume
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link
+                href="/media"
+                className="w-full px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground cursor-pointer"
+              >
+                Media
               </Link>
             </DropdownMenuItem>
           </DropdownMenuContent>

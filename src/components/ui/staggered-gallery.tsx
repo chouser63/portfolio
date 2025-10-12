@@ -48,7 +48,7 @@ function StaggeredGallery({ gallery }: { gallery: Gallery }) {
 
                       {typeof galleryItem.title !== 'string' && galleryItem.title.github && (
                         <a href={galleryItem.title.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="ml-6 inline h-12 w-12 hover:text-gray-600 dark:hover:text-gray-300 transition-colors" />
+                          <Github className="ml-6 inline h-12 w-12 hover:text-gray-600 dark:hover:text-gray-300 transition-colors hover:scale-105" />
                         </a>
                       )}
 
