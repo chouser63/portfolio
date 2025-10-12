@@ -3,7 +3,7 @@ import { Photo } from "@/components/ui/photo-gallery";
 
 export default function Media() {
 
-    let photos: Photo[] = [
+    const photos: Photo[] = [
         { src: "/images/gallery1.JPG", description: "Libertyville, IL" },
         { src: "/images/gallery2.JPG", description: "Libertyville, IL" },
         { src: "/images/gallery3.JPG", description: "Badlands National Park, South Dakota" },
