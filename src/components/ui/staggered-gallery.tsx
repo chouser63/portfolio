@@ -18,7 +18,7 @@ type Gallery = {
 
 function StaggeredGallery({ gallery }: { gallery: Gallery }) {
   return (
-    <div className="mx-auto h-full w-full space-y-12 pb-8 text-center">
+    <div className="mx-auto h-full w-full sm:space-y-12 sm:pb-8 text-center">
       <div className="mx-auto max-w-2xl text-center">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl dark:text-white">
           {gallery.title}
