@@ -55,7 +55,7 @@ function StaggeredGallery({ gallery }: { gallery: Gallery }) {
 
                     </div>
                   </h1>
-                  <p className="text-xl leading-relaxed text-slate-700 sm:text-2xl dark:text-white">
+                  <p className="text-xl leading-relaxed text-slate-700 dark:text-white">
                     {galleryItem.description}
                   </p>
                 </div>
