@@ -82,11 +82,12 @@ export default function PhotoGallery({ photos }: { photos: Photo[] }) {
                             className="w-auto h-auto max-w-full max-h-[90vh] object-contain"
                             onClick={(e) => e.stopPropagation()}
                         />
-                        {enlargedImage.description && (
+                        
+                        {/* {enlargedImage.description && (
                             <div className="absolute opacity-50 z-50 bottom-0 bg-slate-950 text-white w-full transition-opacity duration-300 p-1 pl-2 z-30">
                                 {enlargedImage.description}
                             </div>
-                        )}
+                        )} */}
                     </div>
                 </div>
             )}

@@ -55,4 +55,4 @@ type Photo = {
 ## Notes
 
 - Make sure the images you use are < 1MB, otherwise slow load time (can compress using squoosh.app)
-- Description is not shown on enlarged image, that requires impl. change
+- Showing the description on the enlarged image is implemented, you just need to uncomment the code in the component
