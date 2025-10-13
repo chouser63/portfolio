@@ -13,6 +13,7 @@ export type Photo = {
 interface EnlargedImage {
     src: string;
     alt: string;
+    description?: string;
 }
 
 /**
@@ -24,10 +25,11 @@ export default function PhotoGallery({ photos }: { photos: Photo[] }) {
     const [enlargedImage, setEnlargedImage] = useState<EnlargedImage | null>(null);
 
     //User clicks on image element --> display enlarged version 
-    const handleImageClick = (src: string, alt: string) => {
+    const handleImageClick = (src: string, alt: string, description?: string) => {
         setEnlargedImage({
             src,
             alt,
+            description,
         });
     };
 
@@ -53,7 +55,7 @@ export default function PhotoGallery({ photos }: { photos: Photo[] }) {
                             alt={`Photo ${index + 1}`}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer relative z-20"
-                            onClick={() => handleImageClick(photo.src, `Photo ${index + 1}`)}
+                            onClick={() => handleImageClick(photo.src, `Photo ${index + 1}`, photo.description || undefined)}
                             sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                         />
                         {photo.description && (
@@ -80,6 +82,11 @@ export default function PhotoGallery({ photos }: { photos: Photo[] }) {
                             className="w-auto h-auto max-w-full max-h-[90vh] object-contain"
                             onClick={(e) => e.stopPropagation()}
                         />
+                        {enlargedImage.description && (
+                            <div className="absolute opacity-50 z-50 bottom-0 bg-slate-950 text-white w-full transition-opacity duration-300 p-1 pl-2 z-30">
+                                {enlargedImage.description}
+                            </div>
+                        )}
                     </div>
                 </div>
             )}

@@ -40,7 +40,7 @@ type Photo = {
 ## Features
 
 - Responsive grid layout (1-4 columns based on screen size)
-- Loading skeletons (shadcn) + react Suspense while images load
+- Loading skeletons (react-loading-skeleton) while images load
 - Click to enlarge images in a modal view
 - Hover effects with optional description overlay
 - Image optimization using Next.js Image component
@@ -49,11 +49,10 @@ type Photo = {
 ## Dependencies
 
 - next/image
-- shadcn/ui Skeleton component
+- Skeleton from react-loading-skeleton
 - Tailwind CSS
-- react Suspense
 
 ## Notes
 
-- Make sure the images you use are < 1MB, otherwise slow load time (compress them)
+- Make sure the images you use are < 1MB, otherwise slow load time (can compress using squoosh.app)
 - Description is not shown on enlarged image, that requires impl. change
