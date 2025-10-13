@@ -13,6 +13,10 @@ interface EnlargedImage {
     alt: string;
 }
 
+/**
+ * PhotoGallery Component
+ * see Documentation: ../../../docs/components/photo-gallery.md
+ */
 export default function PhotoGallery({ photos }: { photos: Photo[] }) {
 
     const [enlargedImage, setEnlargedImage] = useState<EnlargedImage | null>(null);
