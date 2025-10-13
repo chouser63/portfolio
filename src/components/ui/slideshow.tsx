@@ -16,7 +16,7 @@ function Slideshow({ images }: { images: string[] }) {
     >
       <button
         onClick={() => setSlideshowPosition((prev) => prev - 1)}
-        className={`z-50 p-0 ${slideshowPosition <= 0 ? "opacity-0" : ""}`}
+        className={`z-50 p-0 ${slideshowPosition <= 0 ? "opacity-0" : ""} cursor-pointer`}
         disabled={slideshowPosition <= 0}
       >
         <ChevronLeft size={arrowSize} color={arrowColor} />
@@ -48,7 +48,7 @@ function Slideshow({ images }: { images: string[] }) {
 
       <button
         onClick={() => setSlideshowPosition((prev) => prev + 1)}
-        className={`z-50 ${slideshowPosition >= images.length - 1 ? "opacity-0" : ""}`}
+        className={`z-50 ${slideshowPosition >= images.length - 1 ? "opacity-0" : ""} cursor-pointer`}
         disabled={slideshowPosition >= images.length - 1}
       >
         <ChevronRight size={arrowSize} color={arrowColor} />
