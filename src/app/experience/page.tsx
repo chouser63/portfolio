@@ -48,7 +48,7 @@ export default function Experience() {
                     text: "Odyssey - Chancellor Presentations",
                 },
                 description:
-                    "Delivered two presentations pitching Odyssey to Northeastern University leadership, including Chancellor Ken Henderson, Vice Chancellors, Deans, and members of the Khoury College advising team.",
+                    "Delivered two presentations pitching Odyssey to Northeastern University leadership, including Chancellor Ken Henderson, Vice Chancellors, Deans, and members of the Khoury College advising team, highlighting the project’s potential campus-wide applications.",
                 image_urls: [
                     "/images/odyssey-presentation-1.jpg",
                     "/images/odyssey-presentation-2.jpg",
