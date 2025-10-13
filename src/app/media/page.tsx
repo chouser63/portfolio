@@ -19,7 +19,7 @@ export default function Media() {
     photos.sort(() => Math.random() - 0.5);
 
     return (
-        <div>
+        <div className="w-full min-h-screen">
             <PhotoGallery photos={photos} />
         </div>
     )

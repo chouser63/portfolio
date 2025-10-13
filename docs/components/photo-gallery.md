@@ -51,7 +51,9 @@ type Photo = {
 - next/image
 - shadcn/ui Skeleton component
 - Tailwind CSS
+- react Suspense
 
 ## Notes
 
-- Make sure the images you use are < 1MB, otherwise slow load time
+- Make sure the images you use are < 1MB, otherwise slow load time (compress them)
+- Description is not shown on enlarged image, that requires impl. change
