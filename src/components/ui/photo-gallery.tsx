@@ -1,8 +1,9 @@
 'use client'
 
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import { Skeleton } from "./skeleton";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 export type Photo = {
     src: string;
@@ -40,23 +41,27 @@ export default function PhotoGallery({ photos }: { photos: Photo[] }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
                 {photos.map((photo, index) => (
                     <div key={index} className="w-full h-64 overflow-hidden rounded-lg relative group">
-                        <Suspense fallback={<Skeleton className="absolute inset-0 z-10 bg-emerald-300" />}>
-                            <Image
-                                src={photo.src}
-                                alt={`Photo ${index + 1}`}
-                                fill
-                                className="object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
-                                onClick={() => handleImageClick(photo.src, `Photo ${index + 1}`)}
-                                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                            />
+                        <Skeleton 
+                            height="100%" 
+                            width="100%" 
+                            className="absolute inset-0 z-10 rounded-lg"
+                            baseColor="#caccd0ff"
+                            highlightColor="#caccd0ff"
+                        />
+                        <Image
+                            src={photo.src}
+                            alt={`Photo ${index + 1}`}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer relative z-20"
+                            onClick={() => handleImageClick(photo.src, `Photo ${index + 1}`)}
+                            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        />
                         {photo.description && (
-                            <div className="absolute bottom-0 bg-slate-950 text-white w-full opacity-0 group-hover:opacity-50 transition-opacity duration-300 p-1 pl-2"
+                            <div className="absolute bottom-0 bg-slate-950 text-white w-full opacity-0 group-hover:opacity-50 transition-opacity duration-300 p-1 pl-2 z-30"
                                 key={`description-${index}`}>
                                 {photo.description}
                             </div>
                         )}
-                        </Suspense>
-                        
                     </div>
                 ))}
             </div>
