@@ -45,7 +45,7 @@ export default function PhotoGallery({ photos }: { photos: Photo[] }) {
                             <img
                             src={photo.src}
                             alt={`Photo ${index + 1}`}
-                            className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-300}`}
+                            className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-300`}
                             onClick={handleImageClick}
                         />
                         {photo.description && (
