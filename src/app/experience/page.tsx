@@ -43,6 +43,18 @@ export default function Experience() {
                 description:
                     "Served as a teaching assistant for Introduction to Databases at Northeastern University. Conducted weekly office hours to support students, clarified relational model concepts, and graded over 120 submissions per assignment. Focused on improving student understanding of SQL, schema design, and query optimization.",
             },
+            {
+                title: {
+                    text: "Odyssey - Chancellor Presentations",
+                },
+                description:
+                    "Delivered two presentations pitching Odyssey to Northeastern University leadership, including Chancellor Ken Henderson, Vice Chancellors, Deans, and members of the Khoury College advising team.",
+                image_urls: [
+                    "/images/odyssey-presentation-1.jpg",
+                    "/images/odyssey-presentation-2.jpg",
+                    "/images/odyssey-presentation-3.png",
+                ],
+            },
         ],
     };
 
