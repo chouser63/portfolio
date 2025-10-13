@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { Skeleton } from "./skeleton";
 
 export type Photo = {
@@ -16,15 +16,8 @@ interface EnlargedImage {
 export default function PhotoGallery({ photos }: { photos: Photo[] }) {
 
     const [enlargedImage, setEnlargedImage] = useState<EnlargedImage | null>(null);
-    const [loadedImages, setLoadedImages] = useState<{ [key: string]: boolean }>({});
 
-    const handleImageLoad = (src: string) => {
-        setLoadedImages(prev => ({
-            ...prev,
-            [src]: true
-        }));
-    };
-
+    //User clicks on HTML image element --> display enlarged version 
     const handleImageClick = (e: React.MouseEvent) => {
         const target = e.target as HTMLElement;
         if (target.tagName !== "IMG") {
@@ -48,22 +41,21 @@ export default function PhotoGallery({ photos }: { photos: Photo[] }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
                 {photos.map((photo, index) => (
                     <div key={index} className="w-full h-64 overflow-hidden rounded-lg relative group">
-                        {!loadedImages[photo.src] && (
-                            <Skeleton className="absolute inset-0 z-10" />
-                        )}
-                        <img
+                        <Suspense fallback={<Skeleton className="absolute inset-0 z-10" />}>
+                            <img
                             src={photo.src}
                             alt={`Photo ${index + 1}`}
-                            className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ${!loadedImages[photo.src] ? 'opacity-0' : 'opacity-100'}`}
+                            className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-300`}
                             onClick={handleImageClick}
-                            onLoad={() => handleImageLoad(photo.src)}
                         />
-                        {photo.description && loadedImages[photo.src] && (
+                        {photo.description && (
                             <div className="absolute bottom-0 bg-slate-950 text-white w-full opacity-0 group-hover:opacity-50 transition-opacity duration-300 p-1 pl-2"
                                 key={`description-${index}`}>
                                 {photo.description}
                             </div>
                         )}
+                        </Suspense>
+                        
                     </div>
                 ))}
             </div>
@@ -72,12 +64,12 @@ export default function PhotoGallery({ photos }: { photos: Photo[] }) {
                     className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800/50"
                     onClick={handleCloseEnlarged}
                 >
-                        <img
-                            src={enlargedImage?.src}
-                            alt={enlargedImage?.alt}
-                            className="max-w-[90%] max-h-[90vh] object-contain"
-                            onClick={(e) => e.stopPropagation()}
-                        />
+                    <img
+                        src={enlargedImage?.src}
+                        alt={enlargedImage?.alt}
+                        className="max-w-[90%] max-h-[90vh] object-contain"
+                        onClick={(e) => e.stopPropagation()}
+                    />
                 </div>
             )}
         </div>
