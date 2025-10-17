@@ -1,3 +1,4 @@
+import Contact from "@/components/home/contact";
 import { ProgressClicker } from "@/components/progress-clicker";
 import ProfilePicture from "@/components/ui/profile-picture";
 import { SocialIcon } from 'react-social-icons'
@@ -18,6 +19,7 @@ export default function Home() {
           <SocialIcon url="https://www.github.com/chouser63" target="_blank" rel="noopener noreferrer" className="hover:scale-105"/>
           <SocialIcon url="https://www.linkedin.com/in/chase-houser/" target="_blank" rel="noopener noreferrer" className="hover:scale-105"/>
         </div>
+        <Contact/>
         <p>
           I&apos;m a third-year Computer Science and Business Administration student at Northeastern University with a deep passion for learning new things and a belief in having a wide breadth of experiences.
         </p>
@@ -32,16 +34,6 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="w-3/4 sm:w-1/2 space-y-4 text-xl text-slate-700 dark:text-white">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
-          Contact
-        </h1>
-        <p>
-          houser.ch@northeastern.edu
-          <br />
-          +1(847)-284-5315
-        </p>
-      </div>
 
       <div className="w-3/4 sm:w-1/2">
         <ProgressClicker />
