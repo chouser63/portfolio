@@ -19,6 +19,7 @@ export default function Home() {
           <SocialIcon url="https://www.github.com/chouser63" target="_blank" rel="noopener noreferrer" className="hover:scale-105"/>
           <SocialIcon url="https://www.linkedin.com/in/chase-houser/" target="_blank" rel="noopener noreferrer" className="hover:scale-105"/>
         </div>
+        <Contact/>
         <p>
           I&apos;m a third-year Computer Science and Business Administration student at Northeastern University with a deep passion for learning new things and a belief in having a wide breadth of experiences.
         </p>
@@ -33,7 +34,6 @@ export default function Home() {
         </p>
       </div>
 
-      <Contact/>
 
       <div className="w-3/4 sm:w-1/2">
         <ProgressClicker />
