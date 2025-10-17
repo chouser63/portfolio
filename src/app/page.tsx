@@ -1,3 +1,4 @@
+import Contact from "@/components/home/contact";
 import { ProgressClicker } from "@/components/progress-clicker";
 import ProfilePicture from "@/components/ui/profile-picture";
 import { SocialIcon } from 'react-social-icons'
@@ -32,16 +33,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="w-3/4 sm:w-1/2 space-y-4 text-xl text-slate-700 dark:text-white">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
-          Contact
-        </h1>
-        <p>
-          houser.ch@northeastern.edu
-          <br />
-          +1(847)-284-5315
-        </p>
-      </div>
+      <Contact/>
 
       <div className="w-3/4 sm:w-1/2">
         <ProgressClicker />
