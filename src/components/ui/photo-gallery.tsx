@@ -42,7 +42,7 @@ export default function PhotoGallery({ photos }: { photos: Photo[] }) {
         <div className="w-full h-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
                 {photos.map((photo, index) => (
-                    <div key={index} className="w-full h-64 overflow-hidden rounded-lg relative group">
+                    <div key={index} className="w-full h-68 overflow-hidden rounded-lg relative group">
                         <Skeleton 
                             height="100%" 
                             width="100%" 

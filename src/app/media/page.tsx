@@ -14,8 +14,9 @@ export default function Media() {
         { src: "/images/gallery8.JPG", description: "Mission Hill, Boston" },
         { src: "/images/gallery9.JPG", description: "Mission Hill, Boston + Blue the dog" },
         { src: "/images/gallery10.JPG", description: "Cannon Mountain, Franciona, NH" },
-        { src: "/images/gallery11.jpg", description: "Us?" },
+        //{ src: "/images/gallery11.jpg", description: "Us?" },
         { src: "/images/gallery12.jpg", description: "Mount Si, Washington" },
+        { src: "/images/bull.JPG", description: "Cherokee St, Boston"}
     ];
 
     photos.sort(() => Math.random() - 0.5);
