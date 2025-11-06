@@ -1,11 +1,16 @@
+"use client"
+
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Menu } from "lucide-react"
 import { LogoutButton } from "./auth/logout-button"
+import { supabase } from "@/lib/supabaseClient"
+import { useEffect, useState } from "react"
 
 
 export function Navbar() {
+
   return (
     <nav className="flex items-center justify-between px-6 py-3 border-b bg-background">
       <Link
@@ -30,6 +35,8 @@ export function Navbar() {
         >
           Resume
         </Link>
+
+
         <Link
           href="/media"
           className={cn("text-sm font-medium text-muted-foreground hover:text-foreground transition-colors")}
@@ -37,6 +44,8 @@ export function Navbar() {
           Media
         </Link>
         <LogoutButton />
+
+
       </div>
 
       <div className="sm:hidden flex items-center">
