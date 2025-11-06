@@ -6,7 +6,7 @@ import { Auth } from '@supabase/auth-ui-react'
 import { ThemeSupa } from '@supabase/auth-ui-shared'
 import { supabase } from '@/lib/supabaseClient'
 
-const protectedRoutes = ['/movie-reviews', '/experience', '/', '/media', '/resume']
+const protectedRoutes = ['/movie-reviews']
 
 export function AuthWrapper({ children }: { children: React.ReactNode }) {
   const [session, setSession] = useState<any>(null)
@@ -35,7 +35,7 @@ export function AuthWrapper({ children }: { children: React.ReactNode }) {
       const isLoginPage = pathname === '/login'
 
       if (!session && isProtectedRoute) {
-        router.push('/login')
+        router.push('/')
       } else if (session && isLoginPage) {
         router.push('/')
       }
