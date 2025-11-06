@@ -6,7 +6,7 @@ import { Auth } from '@supabase/auth-ui-react'
 import { ThemeSupa } from '@supabase/auth-ui-shared'
 import { supabase } from '@/lib/supabaseClient'
 
-const protectedRoutes = ['/shower-thoughts', '/experience', '/', '/media', '/resume']
+const protectedRoutes = ['/movie-reviews', '/experience', '/', '/media', '/resume']
 
 export function AuthWrapper({ children }: { children: React.ReactNode }) {
   const [session, setSession] = useState<any>(null)
