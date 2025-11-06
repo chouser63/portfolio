@@ -2,6 +2,7 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Menu } from "lucide-react"
+import { LogoutButton } from "./auth/logout-button"
 
 
 export function Navbar() {
@@ -35,6 +36,7 @@ export function Navbar() {
         >
           Media
         </Link>
+        <LogoutButton />
       </div>
 
       <div className="sm:hidden flex items-center">
@@ -68,6 +70,9 @@ export function Navbar() {
               >
                 Media
               </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <LogoutButton />
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

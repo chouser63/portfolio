@@ -3,8 +3,8 @@ import { ProgressClicker } from "@/components/progress-clicker";
 import ProfilePicture from "@/components/ui/profile-picture";
 import { SocialIcon } from 'react-social-icons'
 
-export default function Home() {
 
+export default async function Home() {
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center py-12 space-y-12">
