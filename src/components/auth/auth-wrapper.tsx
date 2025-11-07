@@ -50,21 +50,6 @@ export function AuthWrapper({ children }: { children: React.ReactNode }) {
     )
   }
 
-  if (!session && pathname === '/login') {
-    return (
-      <div className="w-full min-h-screen flex items-center justify-center py-12 px-4">
-        <div className="w-full max-w-md">
-          <h1 className="text-2xl font-bold mb-6 text-center">Login</h1>
-          <Auth 
-            supabaseClient={supabase} 
-            appearance={{ theme: ThemeSupa }}
-            providers={[]}
-          />
-        </div>
-      </div>
-    )
-  }
-
   if (!session && protectedRoutes.some(route => pathname.startsWith(route))) {
     return (
       <div className="w-full h-screen flex items-center justify-center">
