@@ -15,7 +15,7 @@ export default function MovieReviewCard({ review }: { review: MovieReview }) {
       className="flex items-stretch bg-white dark:bg-slate-800 shadow-sm rounded-lg overflow-hidden"
     >
       {/* Rank column */}
-      <div className="flex items-center justify-center w-16 bg-indigo-600 text-white font-semibold text-lg">
+      <div className="flex items-center justify-center w-16 bg-sky-300 text-white font-semibold text-3xl">
         {review.rank}
       </div>
 

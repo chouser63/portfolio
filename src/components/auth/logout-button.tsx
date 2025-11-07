@@ -15,7 +15,7 @@ export function LogoutButton() {
   }
 
   return (
-    <button onClick={handleLogout} className="px-2 text-muted-foreground hover:text-foreground">
+    <button onClick={handleLogout} className="px-2 text-muted-foreground hover:text-foreground cursor-pointer">
       <MoveRightIcon/>
     </button>
   )

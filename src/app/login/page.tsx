@@ -54,7 +54,7 @@ export default function LoginPage() {
   if (session) {
     return (
       <div className="w-full h-screen flex items-center justify-center">
-        <p className="text-lg">Redirecting...</p>
+        <div role="status" aria-label="Redirecting" className="w-14 h-14 rounded-full border-4 border-slate-300 border-t-transparent animate-spin" />
       </div>
     )
   }

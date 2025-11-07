@@ -45,7 +45,7 @@ export function AuthWrapper({ children }: { children: React.ReactNode }) {
   if (loading) {
     return (
       <div className="w-full h-screen flex items-center justify-center">
-        <p className="text-lg">Loading...</p>
+        <div role="status" aria-label="Loading" className="w-14 h-14 rounded-full border-4 border-slate-300 border-t-transparent animate-spin" />
       </div>
     )
   }
@@ -53,7 +53,7 @@ export function AuthWrapper({ children }: { children: React.ReactNode }) {
   if (!session && protectedRoutes.some(route => pathname.startsWith(route))) {
     return (
       <div className="w-full h-screen flex items-center justify-center">
-        <p className="text-lg">Redirecting...</p>
+        <div role="status" aria-label="Redirecting" className="w-14 h-14 rounded-full border-4 border-slate-300 border-t-transparent animate-spin" />
       </div>
     )
   }
