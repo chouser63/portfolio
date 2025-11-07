@@ -2,7 +2,6 @@
 
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabaseClient'
-import { Button } from '@/components/ui/button'
 import { MoveRightIcon } from 'lucide-react'
 
 export function LogoutButton() {

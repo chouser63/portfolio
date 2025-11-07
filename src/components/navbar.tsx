@@ -7,10 +7,11 @@ import { Menu } from "lucide-react"
 import { LogoutButton } from "./auth/logout-button"
 import { supabase } from "@/lib/supabaseClient"
 import { useEffect, useState } from "react"
+import { Session } from "@supabase/supabase-js"
 
 
 export function Navbar() {
-  const [session, setSession] = useState<any>(null)
+  const [session, setSession] = useState<Session | null>(null)
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
