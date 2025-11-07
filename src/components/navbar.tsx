@@ -35,7 +35,7 @@ export function Navbar() {
         Chase Houser
       </Link>
 
-      <div className="flex items-center hidden sm:block space-x-6">
+      <div className="flex items-center hidden sm:flex space-x-6">
         <Link
           href="/experience"
           className={cn("text-sm font-medium text-muted-foreground hover:text-foreground transition-colors")}
@@ -66,7 +66,8 @@ export function Navbar() {
           </Link>
         )}
 
-        {session && <LogoutButton />}
+        {session && 
+        <LogoutButton />}
       </div>
 
       <div className="sm:hidden flex items-center">
@@ -111,7 +112,7 @@ export function Navbar() {
             )}
             {session && (
               <DropdownMenuItem asChild>
-                <LogoutButton />
+                  <LogoutButton />
               </DropdownMenuItem>
             )}
           </DropdownMenuContent>

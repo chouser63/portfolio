@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabaseClient'
 import { Button } from '@/components/ui/button'
+import { MoveRightIcon } from 'lucide-react'
 
 export function LogoutButton() {
   const router = useRouter()
@@ -14,8 +15,8 @@ export function LogoutButton() {
   }
 
   return (
-    <Button onClick={handleLogout} variant="outline">
-      Logout
-    </Button>
+    <button onClick={handleLogout} className="px-2 text-muted-foreground hover:text-foreground">
+      <MoveRightIcon/>
+    </button>
   )
 }
