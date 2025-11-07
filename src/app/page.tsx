@@ -1,7 +1,6 @@
 import Contact from "@/components/home/contact";
 import { ProgressClicker } from "@/components/progress-clicker";
 import ProfilePicture from "@/components/ui/profile-picture";
-import Link from "next/link";
 import { SocialIcon } from 'react-social-icons'
 
 
