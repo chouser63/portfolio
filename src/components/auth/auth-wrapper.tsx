@@ -3,11 +3,12 @@
 import { useState, useEffect } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabaseClient'
+import { Session } from '@supabase/supabase-js'
 
 const protectedRoutes = ['/movie-reviews']
 
 export function AuthWrapper({ children }: { children: React.ReactNode }) {
-  const [session, setSession] = useState<any>(null)
+  const [session, setSession] = useState<Session | null>(null)
   const [loading, setLoading] = useState(true)
   const pathname = usePathname()
   const router = useRouter()
