@@ -1,25 +1,26 @@
 import Contact from "@/components/home/contact";
 import { ProgressClicker } from "@/components/progress-clicker";
 import ProfilePicture from "@/components/ui/profile-picture";
+import Link from "next/link";
 import { SocialIcon } from 'react-social-icons'
 
-export default function Home() {
 
+export default async function Home() {
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center py-12 space-y-12">
       <div className="w-2/3 flex flex-col sm:flex-row items-center justify-center space-y-12 sm:space-y-0 sm:space-x-12">
         <ProfilePicture src="/images/profile-photo.JPG" size={300} />
         <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl dark:text-white">
-          Hi, I&apos;m Chase.
+          <a href="/login" className="cursor-default">Hi</a>, I&apos;m Chase.
         </h1>
       </div>
       <div className="w-3/4 sm:w-1/2 space-y-6 text-xl text-slate-700 dark:text-white">
         <div className="flex flex-row space-x-6">
-          <SocialIcon url="https://www.github.com/chouser63" target="_blank" rel="noopener noreferrer" className="hover:scale-105"/>
-          <SocialIcon url="https://www.linkedin.com/in/chase-houser/" target="_blank" rel="noopener noreferrer" className="hover:scale-105"/>
+          <SocialIcon url="https://www.github.com/chouser63" target="_blank" rel="noopener noreferrer" className="hover:scale-105" />
+          <SocialIcon url="https://www.linkedin.com/in/chase-houser/" target="_blank" rel="noopener noreferrer" className="hover:scale-105" />
         </div>
-        <Contact/>
+        <Contact />
         <p>
           I&apos;m a third-year Computer Science and Business Administration student at Northeastern University with a deep passion for learning new things and a belief in having a wide breadth of experiences.
         </p>

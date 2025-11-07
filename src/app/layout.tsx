@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Navbar as NavBar } from "@/components/navbar"
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next"
+import { AuthWrapper } from "@/components/auth/auth-wrapper"
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,16 +25,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NavBar/>
+        <AuthWrapper>
+          <NavBar/>
           <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-          {children}
-          <Analytics />
-        </main>
+            {children}
+            <Analytics />
+          </main>
+        </AuthWrapper>
       </body>
     </html>
   );
